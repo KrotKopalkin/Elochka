@@ -6,45 +6,40 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button_yes"
-        android:layout_width="197dp"
-        android:layout_height="267dp"
+        android:id="@+id/yes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="ДА"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toEndOf="@+id/button_no"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/button_no"
-        android:layout_width="197dp"
-        android:layout_height="267dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="НЕТ"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="76dp"
+        android:layout_width="0dp"
         android:layout_height="81dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:text="Н"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_back"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="81dp"
         android:layout_marginTop="8dp"
         android:text="Предыдущий вопрос"
@@ -55,7 +50,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="377dp"
         android:layout_marginTop="8dp"
         android:text="Вы являетесь ветераном Великой Отечественной Войны 1941-1945 года?"
@@ -63,6 +58,17 @@
         android:textColorLink="#AA2C2C"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_back" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="1dp"
+        android:layout_height="150dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
