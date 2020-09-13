@@ -27,6 +27,13 @@ public class MainActivity extends AppCompatActivity implements
                 startActivity(new Intent(MainActivity.this, question.class));
             }
         });
+        Button all=findViewById(R.id.all);
+        all.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ListAda.class));
+            }
+        });
     }
     //непонятный метод, не трогать, озвучиватель умрет
     @Override

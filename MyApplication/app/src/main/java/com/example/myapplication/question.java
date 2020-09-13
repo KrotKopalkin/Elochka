@@ -21,9 +21,6 @@ public class question extends AppCompatActivity {
         yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String text = "А Васька слушает да ест";
-                mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
-                qwest.setText("Херняяяя");
             }
         });
 
