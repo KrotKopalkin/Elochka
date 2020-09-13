@@ -4,11 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import static com.example.myapplication.MainActivity.mTTS;
 
 public class question extends AppCompatActivity {
     @Override
@@ -20,6 +21,8 @@ public class question extends AppCompatActivity {
         yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String text = "А Васька слушает да ест";
+                mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
                 qwest.setText("Херняяяя");
             }
         });
