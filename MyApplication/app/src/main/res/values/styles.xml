@@ -4,15 +4,14 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
         <item name="colorButtonNormal">@color/colorButton</item>
     </style>
 
     <style name="ContrastTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorBackground">@color/colourContrastPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorButtonNormal">@color/colorButton</item>
+        <item name="android:textColor">@color/colourContrastText</item>
+        <item name="colorButtonNormal">@color/colourContrastButton</item>
     </style>
 
 </resources>

@@ -5,7 +5,12 @@
     <color name="colorAccent">#9CD391</color>
     <color name="colorButton">#7EDBA7</color>
     <color name="colourTitle">#FFFFFF</color>
+
+
+
     <color name="colourContrastPrimary">#1D1A1A</color>
+    <color name="colourContrastText">#00FF00</color>
+    <color name="colourContrastButton">#0000FF</color>
 
 
 
