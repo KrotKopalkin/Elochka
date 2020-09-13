@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
@@ -31,7 +33,20 @@ public class MainActivity extends AppCompatActivity implements
         all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences prefs =getSharedPreferences("settings", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("MASS"," ").apply();
                 startActivity(new Intent(MainActivity.this, ListAda.class));
+            }
+        });
+        Button prev=findViewById(R.id.history);
+        prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences prefs =getSharedPreferences("settings", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("MASS",prefs.getString("MASs"," ")).apply();
+                startActivity(new Intent(MainActivity.this,ListAda.class));
             }
         });
     }

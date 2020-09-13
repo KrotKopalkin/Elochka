@@ -43,7 +43,6 @@ public class question extends AppCompatActivity {
         var_num = getResources().getStringArray(R.array.var_num);
         var_start = getResources().getStringArray(R.array.var_start);
 
-
         //--Scriptt--
         qwest.setText(var[i]);
         Button no=findViewById(R.id.button_no);
@@ -53,7 +52,7 @@ public class question extends AppCompatActivity {
                 if (i != 36) {i++;} else {
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putString("MASS",mass).apply();
-                    startActivity(new Intent(question.this, ListAda.class));
+                    startActivity(new Intent(question.this, ListAda.class));finish();
                 }
                 qwest.setText(var[i]);
             }
@@ -72,7 +71,7 @@ public class question extends AppCompatActivity {
                 if (i != 36) {i++;} else {
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putString("MASS",mass).apply();
-                    startActivity(new Intent(question.this, ListAda.class));
+                    startActivity(new Intent(question.this, ListAda.class));finish();
                     }
                 Log.i("asd", mass);
                 qwest.setText(var[i]);
@@ -84,7 +83,7 @@ public class question extends AppCompatActivity {
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(question.this, MainActivity.class));
+                startActivity(new Intent(question.this, MainActivity.class));finish();
             }
         });
 

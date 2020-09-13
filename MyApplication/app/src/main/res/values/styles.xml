@@ -8,8 +8,8 @@
     </style>
 
     <style name="ContrastTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:colorBackground">@color/colourContrastPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorBackground">@color/colourContrastButton</item>
+        <item name="colorPrimaryDark">@color/colourRed</item>
         <item name="android:textColor">@color/colourContrastText</item>
         <item name="colorButtonNormal">@color/colourContrastButton</item>
     </style>
