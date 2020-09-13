@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -16,9 +17,10 @@ import android.widget.TextView;
 import static com.example.myapplication.MainActivity.mTTS;
 
 public class question extends AppCompatActivity {
+    SharedPreferences prefs;
     int i = 0;
     boolean check = true;
-    String mass = "";
+    public String mass = "";
     String[] name;
     String[] n;
     String[] var;
@@ -29,6 +31,7 @@ public class question extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_activity);
+         prefs=getSharedPreferences("settings", Context.MODE_PRIVATE);
         Context context = this.getApplicationContext();
         final TextView qwest = findViewById(R.id.textView);
 
@@ -39,9 +42,22 @@ public class question extends AppCompatActivity {
         var = getResources().getStringArray(R.array.var);
         var_num = getResources().getStringArray(R.array.var_num);
         var_start = getResources().getStringArray(R.array.var_start);
+
+
         //--Scriptt--
         qwest.setText(var[i]);
-
+        Button no=findViewById(R.id.button_no);
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (i != 36) {i++;} else {
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putString("MASS",mass).apply();
+                    startActivity(new Intent(question.this, ListAda.class));
+                }
+                qwest.setText(var[i]);
+            }
+        });
 
         Button yes = findViewById(R.id.yes);
         yes.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +69,10 @@ public class question extends AppCompatActivity {
 //                qwest.setText("Херняяяя");
 
                 remember_result(var_num[i]);
-                if (i != 37) {i++;} else { //  РЕЗУЛЬТАТ, ПЕРЕХОД В НОВУЮ АКТИВНОСТЬ И ВСЕ ТАКОЕ
+                if (i != 36) {i++;} else {
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putString("MASS",mass).apply();
+                    startActivity(new Intent(question.this, ListAda.class));
                     }
                 Log.i("asd", mass);
                 qwest.setText(var[i]);
