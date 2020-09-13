@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.example.myapplication.question.contrast;
+
 
 public class MainActivity extends AppCompatActivity implements
         TextToSpeech.OnInitListener {
@@ -18,7 +20,10 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        if (!contrast)
+            setContentView(R.layout.activity_main);
+        else
+            setContentView(R.layout.contr_activity_main);
         //кнопочка перехода к тесту
         Button test = findViewById(R.id.test);
         // создние озвучивателя

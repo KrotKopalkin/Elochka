@@ -10,10 +10,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.example.myapplication.question.contrast;
+
 public class fullAnswer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.full_answer);
+        if (!contrast)
+            setContentView(R.layout.full_answer);
+        else
+            setContentView(R.layout.contrast_full_answer);
         TextView ansName = findViewById(R.id.ansName);
         ansName.setTextSize(22);
         TextView bodyName = findViewById(R.id.bodyName);

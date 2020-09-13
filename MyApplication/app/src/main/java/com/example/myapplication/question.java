@@ -26,15 +26,26 @@ public class question extends AppCompatActivity {
     String[] var;
     String[] var_num;
     String[] var_start;
-
+    static boolean contrast=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.question_activity);
+        if(!contrast)
+            setContentView(R.layout.question_activity);
+        else
+            setContentView(R.layout.contrast_question_activity);
+
          prefs=getSharedPreferences("settings", Context.MODE_PRIVATE);
         Context context = this.getApplicationContext();
         final TextView qwest = findViewById(R.id.textView);
-
+        Button contr=findViewById(R.id.button3);
+        contr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contrast=!contrast;
+                startActivity(new Intent(question.this, question.class));
+            }
+        });
         //--Scriptt--
         name = getResources().getStringArray(R.array.name);//name+n
         n = getResources().getStringArray(R.array.n);

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colourContrastButton">
 
     <Button
         android:id="@+id/button_no"
@@ -15,6 +16,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="24dp"
         android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colourContrastText"
         android:text="НЕТ"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +52,7 @@
         android:layout_marginRight="16dp"
         android:background="@color/colorPrimaryDark"
         android:textColor="@color/colourContrastText"
-        android:text="Н"
+        android:text="Контраст"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,6 +84,7 @@
         android:layout_marginRight="16dp"
         android:text="Вы являетесь ветераном Великой Отечественной Войны 1941-1945 года?"
         android:textColor="@color/colourContrastText"
+        android:background="@color/colorPrimaryDark"
         android:textColorLink="#AA2C2C"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
